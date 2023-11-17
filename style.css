@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.inner {
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.text-content {
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    background: hsl(178, 100%, 50%);
+    opacity: 0.6;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+}
+
+.eye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.image-container img, .overlay {
+    border-radius: 15px;
+}
+
+.flex-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 15px;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.white-text {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.author span {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+}
+
+.about-product, .flex-item2, .author-span {
+    color: hsl(215, 51%, 70%) !important;
+}
+
+.about-product{
+    line-height: 1.5rem;
+}
+
+.about-product, .flex-items, .author {
+    padding: 8px 0px;
+}
+
+.flex-item1, .flex-item2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.flex-item1 {
+    color: hsl(178, 100%, 50%);
+}
+
+.white-text:hover, .author span:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.image-container:hover .overlay, .image-container:hover .eye {
+    display: block;
+}
+
+@media only screen and (min-width: 375px){
+    .card {
+        max-width: 338px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+/* @media only screen and (min-width: 576px){
+    .card {
+        max-width: 80%;
+        margin: auto;
+    }
+} */
+
